@@ -1,0 +1,10 @@
+$clear[$message]
+$onlyIf[$message!=;***Informe o quanto de Mensagens Você quer que eu Apague!***]
+$title[$username]
+$description[
+O bot apagou $message Mensagens Nesse canal!
+]
+$footer[Sucesso!] 
+$footerIcon[$authorAvatar]
+$addTimestamp
+$color[#FF0000]
