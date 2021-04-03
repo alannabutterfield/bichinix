@@ -1,0 +1,61 @@
+const Discord = require(`discord.js`);
+
+
+
+    exports.run = async (bot,message,args) => {
+
+        let embed = new Discord.MessageEmbed()
+        .setColor(`ff0a7e`)
+        .setTitle(`Help - `)
+        .setDescription(`***Olá***`)
+
+        message.channel.send(message.author, embed).then(msg => { 
+            msg.react(`💖`).then(() => { 
+            msg.react(`🌺`);
+            msg.react(`🔚`);
+})
+
+
+            const pagina = msg.createReactionCollector((reaction, user) => reaction.emoji.id == `id` && user.id == message.author.id, {time: 60000}) //time: tempo, 1000 = 1sec, 10000 = 10sec
+            const voltar = msg.createReactionCollector((reaction, user) => reaction.emoji.id == `id` && user.id == message.author.id, {time: 60000})
+
+const três = msg.createReactionCollector((reaction, user) => reaction.emoji.id == `id` && user.id == message.author.id, {time: 60000})
+  
+const quatro = msg.createReactionCollector((reaction, user) => reaction.emoji.id == `id` && user.id == message.author.id, {time: 60000})
+  
+            pagina.on(`collect`, r =>{  
+
+                let embed_two = new Discord.MessageEmbed()
+.setColor(`WHITE`)
+.setTitle(`***Meus Comandos***`)
+.setDescription(`***Help***`)
+         
+                msg.edit(embed_two)
+        r.users.remove(message.author.id) 
+            })
+            voltar.on(`collect`, r =>{ 
+                let embed_three = new Discord.MessageEmbed()
+        .setColor(`ff0a7e`)
+        .setTitle(`Help -`)
+        .setDescription(`***Olá ***`)
+        
+        msg.edit(embed_three)
+        r.users.remove(message.author.id) 
+            })
+        })
+  três.on(`collect`, r =>{ 
+Oi
+
+msg.edit(ajuda)
+r.users.remove(message.author.id)
+})
+  
+  quatro.on(`collect`, r =>{ 
+Oi
+
+msg.edit(ajuda)
+r.users.remove(message.author.id) 
+})
+
+
+  }
